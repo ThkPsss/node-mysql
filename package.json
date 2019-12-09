@@ -1,0 +1,23 @@
+{
+  "name": "node-mysql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bamazoneCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThkPsss/node-mysql.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThkPsss/node-mysql/issues"
+  },
+  "homepage": "https://github.com/ThkPsss/node-mysql#readme",
+  "dependencies": {
+    "inquirer": "^7.0.0"
+  }
+}

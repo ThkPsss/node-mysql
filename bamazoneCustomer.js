@@ -41,11 +41,12 @@ var connection = mysql.createConnection({
         message: `How many ${answer.choices}would you like?`
       })
       .then(function(answer) {
-        if (answer.units === results.stock_quanity) {
-
+        if (answer.units <= results.stock_quanity) {
+          console.log(`You have bought ${answer.units} of ${answer.choice}`)
+          results.stock_quanity -= answer.units
         }
-        else if(answer.units != results.stock_quanity) {
-          
+        else if(answer.units >= results.stock_quanity) {
+          console.log(`There are not enough for you to buy. Come again later.`)
         } else{
           connection.end();
         }

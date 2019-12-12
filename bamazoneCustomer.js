@@ -20,3 +20,34 @@ var connection = mysql.createConnection({
     // run the start function after the connection is made to prompt the user
     start();
   });
+
+  function start() {
+    inquirer
+      .prompt({
+        name: "choice",
+        type: "rawlist",
+        choices: function() {
+          var choiceArray = [];
+          for (var i = 0; i < results.length; i++) {
+            choiceArray.push(results[i].item_name);
+          }
+          return choiceArray;
+        },
+        message: "What item would you like to buy?"
+      },
+      {
+        name: "units",
+        type: "input",
+        message: `How many ${answer.choices}would you like?`
+      })
+      .then(function(answer) {
+        if (answer.units === results.stock_quanity) {
+
+        }
+        else if(answer.units != results.stock_quanity) {
+          
+        } else{
+          connection.end();
+        }
+      });
+  }
